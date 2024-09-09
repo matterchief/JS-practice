@@ -1,20 +1,22 @@
-const inputTemp = document.getElementById("textbox");
-const toKelvin = document.getElementById("toKelvin");
+const textBox = document.getElementById("textBox");
 const toFahrenheit = document.getElementById("toFahrenheit");
+const toKelvin = document.getElementById("toKelvin");
 const toCelsius = document.getElementById("toCelsius");
 const result = document.getElementById("result");
-
 let temp;
 
 function convert() {
-  if (toKelvin.checked) {
-    temp = Number(inputTemp.value);
-    console.log(temp);
-    temp = temp + 273.15;
-    result.textContent = `${temp}° is equal to ${temp}`;
-  } else if (toFahrenheit.checked) {
+  if (toFahrenheit.checked) {
+    temp = Number(textBox.value);
+    temp = (temp * 9) / 5 + 32;
+    result.textContent = temp.toFixed(1) + "°F";
   } else if (toCelsius.checked) {
-  } else {
-    result.innerHTML = "Select a unit vrooooo";
+    temp = Number(textBox.value);
+    temp = (temp - 32) * (5 / 9);
+    result.textContent = temp.toFixed(1) + "°C";
+  } else if (toKelvin.checked) {
+    temp = Number(textBox.value);
+    temp = temp + 273.15;
+    result.textContent = temp.toFixed(1) + "°K";
   }
 }
