@@ -5,16 +5,14 @@ body {
 
 form {
   /* text-align: center; */
-  background-color: #c17c74;
-  max-width: 300px;
+  background-color: rgb(255, 153, 153);
+  max-width: 350px;
   margin: auto;
   padding: 25px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.406);
-  border-radius: 15px;
 }
 
 h1 {
-  color: #2a3d45;
+  color: hsla(198, 84%, 52%, 0.876);
 }
 
 #textbox {
@@ -28,10 +26,12 @@ h1 {
 
 label {
   font-family: Arial, Helvetica, sans-serif;
-  color: #2a3d45;
+  color: hsla(198, 71%, 31%, 0.876);
 }
 
 button {
+
+  marg
   text-align: center;
   margin-top: 10px;
   background-color: rgba(227, 51, 51, 0.974);

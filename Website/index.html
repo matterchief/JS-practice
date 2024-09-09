@@ -7,10 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <button id="submit">submit</button>
-      <p id="output"></p>
-    </div>
+    <form>
+      <h1>Convert Temperature:</h1>
+      <input type="number" id="textbox" value="0" /><br />
+
+      <input type="radio" id="toKelvin" name="unit" />
+      <label for="toKelvin">Convert ➜ Kelvin</label><br />
+
+      <input type="radio" id="toFahrenheit" name="unit" />
+      <label for="toFahrenheit">Convert ➜ Fahrenheit</label><br />
+
+      <input type="radio" id="toCelsius" name="unit" />
+      <label for="toCelcius">Convert ➜ Celcius</label> <br />
+
+      <button id="submit" onclick="convert()">Convert</button>
+      <p id="result"></p>
+    </form>
+
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,26 +1,20 @@
-let testScores = 88;
-let grade;
+const inputTemp = document.getElementById("textbox");
+const toKelvin = document.getElementById("toKelvin");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelsius = document.getElementById("toCelsius");
+const result = document.getElementById("result");
 
-switch (true) {
-  case testScores >= 90:
-    grade = "A";
-    break;
+let temp;
 
-  case testScores >= 70:
-    grade = "B";
-    break;
-
-  case testScores >= 60:
-    grade = "C";
-    break;
-
-  case testScores >= 45:
-    grade = "D";
-    break;
-
-  case testScores < 45:
-    grade = "F";
-    break;
+function convert() {
+  if (toKelvin.checked) {
+    temp = Number(inputTemp.value);
+    console.log(temp);
+    temp = temp + 273.15;
+    result.textContent = `${temp}° is equal to ${temp}`;
+  } else if (toFahrenheit.checked) {
+  } else if (toCelsius.checked) {
+  } else {
+    result.innerHTML = "Select a unit vrooooo";
+  }
 }
-
-console.log(grade);
